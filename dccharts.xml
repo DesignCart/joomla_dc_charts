@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="plugin" group="content" method="upgrade" version="5.0">
+    <name>Content - DC Charts</name>
+    <author>Design Cart</author>
+    <version>1.0.0</version>
+    <copyright>Copyright (C) 2025 Design Cart. All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-3.0.html</license>
+    <description><![CDATA[
+	<h3>🧠 Obsługiwane parametry</h3>
+	<table class="adminlist">
+	<thead>
+	<tr>
+	<th>Parametr</th>
+	<th>Opis</th>
+	<th>Domyślna wartość</th>
+	</tr>
+	</thead>
+	<tbody>
+	<tr><td><b>type</b></td><td>Typ wykresu (<code>pie</code>, <code>doughnut</code>, <code>bar</code>, <code>line</code>)</td><td>pie</td></tr>
+	<tr><td><b>title</b></td><td>Tytuł wykresu</td><td>brak</td></tr>
+	<tr><td><b>labels</b></td><td>Etykiety danych (rozdzielone przecinkami)</td><td>wymagane</td></tr>
+	<tr><td><b>values</b></td><td>Dane (rozdzielone przecinkami)</td><td>wymagane</td></tr>
+	<tr><td><b>color</b></td><td>Główny kolor wykresu (HEX lub RGB)</td><td>automatyczna paleta</td></tr>
+	<tr><td><b>legend</b></td><td>Pozycja legendy (<code>top</code>, <code>bottom</code>, <code>left</code>, <code>right</code>, <code>none</code>)</td><td>bottom</td></tr>
+	<tr><td><b>xlabel</b></td><td>Tytuł osi X (dla <code>bar</code> i <code>line</code>)</td><td>brak</td></tr>
+	<tr><td><b>ylabel</b></td><td>Tytuł osi Y (dla <code>bar</code> i <code>line</code>)</td><td>brak</td></tr>
+	<tr><td><b>width</b></td><td>Szerokość kontenera (np. <code>800px</code> lub <code>100%</code>)</td><td>100%</td></tr>
+	<tr><td><b>height</b></td><td>Wysokość kontenera (np. <code>400px</code>)</td><td>400px</td></tr>
+	<tr><td><b>bg</b></td><td>Kolor tła (np. <code>transparent</code>, <code>#fff</code>)</td><td>transparent</td></tr>
+	<tr><td><b>id</b></td><td>Ręczne ID (opcjonalne, gdy chcesz własny identyfikator)</td><td>generowane automatycznie</td></tr>
+	</tbody>
+	</table>
+
+	<h3>📘 Przykłady użycia</h3>
+	<pre>{dcchart type="pie" title="Udział metod płatności" labels="BLIK,Szybkie przelewy,Karta,PayPal,BNPL" values="38,32,15,8,7" legend="bottom"}</pre>
+
+	<pre>{dcchart type="bar" title="Porzucone koszyki – przyczyny" labels="Koszty dostawy,Problemy z płatnością,Brak zaufania,Zbyt długi proces,Inne" values="40,13,18,17,12" color="#007ec3" ylabel="Udział (%)"}</pre>
+
+	<pre>{dcchart type="line" title="Wzrost BNPL 2020–2025" labels="2020,2021,2022,2023,2024,2025" values="1,2,3,5,6,7" color="#f66d6d" ylabel="Udział w rynku (%)"}</pre>
+
+	<pre>{dcchart type="doughnut" title="Podział metod płatności 2025" labels="BLIK,A2A,Karta,BNPL" values="38,32,15,7"}</pre>
+	]]></description>
+
+    <files>
+        <filename plugin="dccharts">dccharts.php</filename>
+        <folder>assets</folder>
+    </files>
+
+    <updateservers>
+		<server type="extension" name="DC Charts">https://www.designcart.pl/download/updates/update_plg_content_dccharts.xml</server>
+	</updateservers>
+</extension>
