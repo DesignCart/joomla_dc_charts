@@ -22,6 +22,6 @@ Installation:
 4. Enable the plugin under Content → DC Charts
 5. Insert {dcchart ...} shortcodes into your articles
 
-License:
-GNU General Public License v3
-© 2025 Design Cart
+<hr>
+<p>🔗 website: <a href="https://www.designcart.pl/">Design Cart</a>
+<p>👨‍💻 author: <a href="https://www.designcart.pl/pawel-nosko.html">Paweł Nosko</a></p>
